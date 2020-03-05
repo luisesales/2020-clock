@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {APIClock,ComputerClock} from './Clock/'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+function App(props) {
+  return (<div>
+    <h1>exemplo de relógio criado no nosso computador</h1>
+    <ComputerClock />
+    <h1>exemplo de relógio pego da API global</h1>
+    <APIClock local="America/Fortaleza"/>
+  </div>);
 }
-
 export default App;
+
+
